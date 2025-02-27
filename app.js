@@ -8,6 +8,12 @@ import loadAppointments from "./lib/loadAppointments.js";
 
 dotenv.config();
 
+console.log(
+  moment().subtract("1", "month").startOf("month").format("YYYY-MM-DD"),
+);
+
+console.log(moment().add("1", "month").endOf("month").format("YYYY-MM-DD"));
+
 const app = express();
 const port = process.env.PORT || 3000;
 
